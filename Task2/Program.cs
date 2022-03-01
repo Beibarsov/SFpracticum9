@@ -20,6 +20,7 @@ class Program
         ArrayReader arrayReader = new ArrayReader();
         arrayReader.ArrayReaderEvent += Sort;
         arrayReader.ArrayReaderEvent += ShowResult;
+        
 
         try
         {
@@ -27,6 +28,7 @@ class Program
         }
         catch (MyException ex)
         {
+            Console.Beep();
             Console.WriteLine(ex.Message);
             Console.WriteLine($"Введенное значение: {ex.Value}");
             Console.WriteLine($"Подробнее об ошибке можно прочитать: {ex.HelpLink}");
